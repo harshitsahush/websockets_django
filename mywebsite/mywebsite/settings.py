@@ -45,6 +45,11 @@ INSTALLED_APPS = [
 
 ASGI_APPLICATION = 'mywebsite.asgi.application'
 
+CHANNEL_LAYERS = {
+    'default' : {
+        "BACKEND" : 'channels.layers.InMemoryChannelLayer'              #implement it later using Redis
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
